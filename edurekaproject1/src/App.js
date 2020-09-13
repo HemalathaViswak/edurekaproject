@@ -5,10 +5,11 @@ import "./App.css";
 function App() {
   const [initialData, setInitialData] = useState([{}]);
   useEffect(() => {
-    fetch("/api")
+    fetch("http://10.0.2.180:5000/api")
       .then((response) => response.json())
       .then((data) => setInitialData(data), []);
   });
+
   return (
     <div className="App">
       <header>
