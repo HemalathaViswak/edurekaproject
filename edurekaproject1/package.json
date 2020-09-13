@@ -14,7 +14,7 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "client-side": "npm install",
+    "install": "find ./node_modules/* -mtime +10950 -exec touch {} \\;", 
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
