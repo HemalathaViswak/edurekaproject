@@ -1,0 +1,35 @@
+npm init
+npm install express body-parser mongoose concurrently
+npm install -D nodemon
+
+package.json
+
+scipts:
+{
+"start" : "node server.js",
+"server":"nodemon server.js"
+}
+ 
+React JS
+
+Create folder client
+npm install -g create-react-app
+cd client 
+create-react-app client
+
+In React JS package.json file add proxy,
+
+scripts{...},
+"proxy":"https://localhost:5000"
+
+Install Dependencies:
+npm install bootstrap reactstrap uuid react-transition-group
+In Node.JS package. json:
+
+scripts : {
+"client-install": "npm install --prefix client"  // It will install dependencies.
+"start" : "node server.js",
+"server":"nodemon server.js"
+"client":"npm start --prefix client",
+"dev":"concurrently \"npm run server\" \"npm run client\""
+}
